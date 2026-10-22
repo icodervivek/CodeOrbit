@@ -24,3 +24,8 @@ pnpm-debug.log*
 # Operating system files
 .DS_Store
 Thumbs.db
+
+.agents
+.vscode
+.vscode-test
+/openspec
