@@ -1,0 +1,105 @@
+{
+  "name": "codeorbit",
+  "displayName": "CodeOrbit",
+  "description": "Language-agnostic workspace intelligence for VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.140.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:codeOrbit.dashboard",
+    "onView:codeOrbit.workspace",
+    "onCommand:codeOrbit.analyze",
+    "onCommand:codeOrbit.openDashboard",
+    "onCommand:codeOrbit.refresh"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeOrbit.analyze",
+        "title": "CodeOrbit: Analyze Workspace",
+        "category": "CodeOrbit"
+      },
+      {
+        "command": "codeOrbit.openDashboard",
+        "title": "CodeOrbit: Open Dashboard",
+        "category": "CodeOrbit"
+      },
+      {
+        "command": "codeOrbit.refresh",
+        "title": "CodeOrbit: Refresh Workspace",
+        "category": "CodeOrbit"
+      }
+    ],
+    "views": {
+      "codeOrbit": [
+        {
+          "id": "codeOrbit.dashboard",
+          "name": "Dashboard",
+          "type": "webview"
+        },
+        {
+          "id": "codeOrbit.workspace",
+          "name": "CodeOrbit Workspace",
+          "contextualTitle": "CodeOrbit"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codeOrbit",
+          "title": "CodeOrbit",
+          "icon": "resources/codeorbit.svg"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "codeOrbit.workspace",
+        "contents": "Analyze your project to discover its languages, frameworks, dependencies, and entry points.\n[Analyze Workspace](command:codeOrbit.analyze)"
+      },
+      {
+        "view": "codeOrbit.dashboard",
+        "contents": "Open the CodeOrbit dashboard to analyze this workspace.\n[Analyze Workspace](command:codeOrbit.analyze)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "codeOrbit.refresh",
+          "when": "view == codeOrbit.workspace",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.140.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "eslint": "^10.5.0",
+    "typescript-eslint": "^8.61.1"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  },
+  "dependencies": {
+    "typescript": "^6.0.3"
+  }
+}
