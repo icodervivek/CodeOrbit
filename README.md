@@ -1,4 +1,8 @@
-# CodeOrbit
+<p align="center">
+  <img src="resources/codeorbit.svg" alt="CodeOrbit logo" width="96">
+</p>
+
+<h1 align="center">CodeOrbit</h1>
 
 CodeOrbit is a local, rule-based VS Code extension for getting oriented in JavaScript, TypeScript, Python, and Java workspaces. It groups findings by workspace folder and project, shows where detections came from, and reports when analysis is incomplete.
 
