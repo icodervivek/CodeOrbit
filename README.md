@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="resources/codeorbit.svg" alt="CodeOrbit logo" width="96">
+  <img src="resources/codeorbit-logo.png" alt="CodeOrbit logo" width="96">
 </p>
 
 <h1 align="center">CodeOrbit</h1>

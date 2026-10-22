@@ -12,3 +12,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Local analysis for JavaScript, TypeScript, Python, and Java workspaces.
 - Evidence-backed framework, dependency, entry point, and selected route findings.
 - Scan diagnostics, partial-result reporting, cancellation handling, and stale-result indicators.
+
+## [0.0.2] - 2026-10-23
+
+### Fixed
+
+- Include the TypeScript parser required by route analysis so the extension activates after installation.

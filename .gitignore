@@ -25,7 +25,6 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
-.agents
-.vscode
-.vscode-test
-/openspec
+.agents/
+.vscode/
+openspec/
